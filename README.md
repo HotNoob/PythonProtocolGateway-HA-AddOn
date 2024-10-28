@@ -8,5 +8,5 @@ files releated to turning ppg into homeassistant add-on
 Install ssh add-on. 
 ```
 cd addons/
-git clone https://github.com/HotNoob/PythonProtocolGateway-HA-AddOn.git 
+git clone --recurse-submodules https://github.com/HotNoob/PythonProtocolGateway-HA-AddOn.git 
 ```
