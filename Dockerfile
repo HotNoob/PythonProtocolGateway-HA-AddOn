@@ -1,13 +1,11 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk add --no-cache build-base python3 py3-pip py3-venv
+RUN apk add --no-cache build-base python3 py3-pip 
 
-# Create a virtual environment
-RUN python3 -m venv /venv
-
-# Install Python dependencies in the virtual environment
-RUN /venv/bin/pip install --no-cache-dir -r /ppg/requirements.txt
+# Create a virtual environment and install dependencies
+RUN python3 -m venv /venv \
+    && /venv/bin/pip install --no-cache-dir -r /ppg/requirements.txt
 
 # Set the working directory and specify the virtual environment in CMD
 WORKDIR /ppg
