@@ -1,19 +1,14 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-RUN apk add --no-cache build-base
+RUN apk add --no-cache build-base python3 py3-pip py3-venv
 
-# Install Python and pip
-RUN apk add --no-cache python3 py3-pip
+# Create a virtual environment
+RUN python3 -m venv /venv
 
-# Copy add-on files
-COPY ppg /ppg
+# Install Python dependencies in the virtual environment
+RUN /venv/bin/pip install --no-cache-dir -r /ppg/requirements.txt
 
-# Install Python dependencies
-RUN pip3 install --no-cache-dir -r /ppg/requirements.txt
-
-# Set the working directory
+# Set the working directory and specify the virtual environment in CMD
 WORKDIR /ppg
-
-# Run the main script
-CMD ["python3", "/ppg/protocol_gateway.py"]
+CMD ["/venv/bin/python", "/ppg/protocol_gateway.py"]
