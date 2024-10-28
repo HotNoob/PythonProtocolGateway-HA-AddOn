@@ -1,6 +1,9 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+# Copy add-on files
+COPY ppg /ppg
+
 RUN apk add --no-cache build-base python3 py3-pip 
 
 # Create a virtual environment and install dependencies
