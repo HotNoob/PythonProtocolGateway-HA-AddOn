@@ -1,0 +1,14 @@
+name: "Python Protocol Gateway"
+description: "Python Protocol Gateway"
+version: "1.0.0"
+slug: "ppg"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+startup: services
+#priveleged to access usb devices
+privileged: true
