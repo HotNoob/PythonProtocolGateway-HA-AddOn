@@ -12,4 +12,4 @@ RUN python3 -m venv /venv \
 
 # Set the working directory and specify the virtual environment in CMD
 WORKDIR /ppg
-CMD ["/venv/bin/python", "/protocol_gateway.py"]
+CMD ["/venv/bin/python", "/ppg/protocol_gateway.py"]

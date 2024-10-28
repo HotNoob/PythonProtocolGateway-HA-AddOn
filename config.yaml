@@ -15,3 +15,4 @@ startup: services
 #priveleged to access usb devices
 usb: true
 uart: true
+url: "https://github.com/HotNoob/PythonProtocolGateway"
