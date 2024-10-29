@@ -16,3 +16,93 @@ startup: services
 usb: true
 uart: true
 url: "https://github.com/HotNoob/PythonProtocolGateway"
+options: {}
+schema:
+  general:
+    log_level:
+      name: Log Level
+      description: Set the logging level.
+      selector:
+        select:
+          options:
+            - label: Debug
+              value: DEBUG
+            - label: Info
+              value: INFO
+            - label: Warning
+              value: WARNING
+            - label: Error
+              value: ERROR
+  transport:
+    transport.0:
+      log_level:
+        name: Transport Log Level
+        description: Logging level for the transport.
+        selector:
+          select:
+            options:
+              - label: Debug
+                value: DEBUG
+              - label: Info
+                value: INFO
+              - label: Warning
+                value: WARNING
+              - label: Error
+                value: ERROR
+      protocol_version:
+        name: Protocol Version
+        description: Set the protocol version.
+        selector:
+          select:
+            options:
+              - label: Growatt v0.14
+                value: v0.14
+              - label: growatt_2020_v1.24 
+                value: growatt_2020_v1.24 
+              - label: sigineer_v0.11 
+                value: sigineer_v0.11 
+              - label: srne_v3.9 
+                value: srne_v3.9 
+              - label: srne_2021_v1.96 
+                value: srne_2021_v1.96 
+              - label: solark_v1.1
+                value: solark_v1.1
+              - label: hdhk_16ch_ac_module
+                value: hdhk_16ch_ac_module
+              - label: eg4_v58  
+                value: eg4_v58
+              - label: eg4_3000ehv_v1   
+                value: eg4_3000ehv_v1 
+        default: v0.14
+      address:
+        name: Device Address
+        description: Address for the device.
+        default: 1
+      port:
+        name: Serial Port
+        description: Set the serial port (e.g., /dev/ttyUSB0).
+        default: /dev/ttyUSB0
+      baudrate:
+        name: Baud Rate
+        description: Set the baud rate.
+        default: 9600
+    transport.1:
+      transport:
+        name: Transport Type
+        description: Type of transport (e.g., mqtt).
+        default: mqtt
+      host:
+        name: MQTT Host
+        description: Enter the MQTT server IP or hostname.
+        default: mqtt_ip
+      port:
+        name: MQTT Port
+        description: Enter the MQTT port.
+        default: 1883
+      user:
+        name: MQTT Username
+        description: Enter the MQTT username.
+        default: mqtt_username
+      pass:
+        name: MQTT Password
+        description: Enter the MQTT password.
