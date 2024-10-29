@@ -17,13 +17,13 @@ usb: true
 uart: true
 url: "https://github.com/HotNoob/PythonProtocolGateway"
 options:
-  beer: true
+  customize: true
   wine: true
   liquor: false
   name: "world"
   year: 2017
 schema:
-  beer: bool
+  customize: bool
   wine: bool
   liquor: bool
   name: str

@@ -1,0 +1,10 @@
+---
+configuration:
+  customize:
+    name: Customize
+    description: >-
+      See the Documentation tab for more information about these options.
+  wine:
+    name: Wine
+    description: >-
+      Wine...
