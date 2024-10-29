@@ -33,23 +33,9 @@ schema:
               value: WARNING
             - label: Error
               value: ERROR
-      default: DEBUG  # Ensure a default is specified here
+      default: DEBUG
   transport:
     transport.0:
-      log_level:
-        name: Transport Log Level
-        description: Logging level for the transport.
-        selector:
-          select:
-            options:
-              - label: Debug
-                value: DEBUG
-              - label: Info
-                value: INFO
-              - label: Warning
-                value: WARNING
-              - label: Error
-                value: ERROR
       protocol_version:
         name: Protocol Version
         description: Set the protocol version.
