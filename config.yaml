@@ -19,4 +19,18 @@ url: "https://github.com/HotNoob/PythonProtocolGateway"
 options: 
   log_level: DEBUG
 schema:
-  log_level: list(debug|info|warning|error)
+  log_level:
+    name: Log Level
+    description: Select the logging level.
+    default: DEBUG  # Default value to be used
+    selector:
+      select:
+        options:
+          - label: Debug
+            value: DEBUG
+          - label: Info
+            value: INFO
+          - label: Warning
+            value: WARNING
+          - label: Error
+            value: ERROR
