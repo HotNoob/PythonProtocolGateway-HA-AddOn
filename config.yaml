@@ -33,6 +33,7 @@ schema:
               value: WARNING
             - label: Error
               value: ERROR
+      default: DEBUG  # Ensure a default is specified here
   transport:
     transport.0:
       log_level:
