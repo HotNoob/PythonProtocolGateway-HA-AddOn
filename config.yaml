@@ -16,6 +16,8 @@ startup: services
 usb: true
 uart: true
 url: "https://github.com/HotNoob/PythonProtocolGateway"
+map:
+  - addon_config:r
 options:
   customize: true
   wine: true
