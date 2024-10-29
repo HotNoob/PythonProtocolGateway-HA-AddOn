@@ -1,9 +1,8 @@
-#https://developers.home-assistant.io/docs/add-ons/configuration
-
-name: "Python Protocol Gateway"
-description: "Python Protocol Gateway"
-version: "1.0.0"
-slug: "ppg"
+---
+name: Python Protocol Gateway
+description: Python Protocol Gateway
+version: 1.0.0
+slug: ppg
 init: false
 arch:
   - aarch64
@@ -12,17 +11,16 @@ arch:
   - armv7
   - i386
 startup: services
-#priveleged to access usb devices
 usb: true
 uart: true
-url: "https://github.com/HotNoob/PythonProtocolGateway"
+url: https://github.com/HotNoob/PythonProtocolGateway
 map:
   - addon_config:r
 options:
   customize: true
   wine: true
   liquor: false
-  name: "world"
+  name: world
   year: 2017
 schema:
   customize: bool
