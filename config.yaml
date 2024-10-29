@@ -16,7 +16,8 @@ startup: services
 usb: true
 uart: true
 url: "https://github.com/HotNoob/PythonProtocolGateway"
-options: {}
+options: 
+  log_level: DEBUG
 schema:
   general:
     log_level:
